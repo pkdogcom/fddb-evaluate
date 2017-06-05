@@ -1,0 +1,10 @@
+# Ignore data folders
+2002
+2003
+
+# Ignore detection results
+detection.txt
+
+# Ignore executables 
+*.o
+evaluation/evaluate
