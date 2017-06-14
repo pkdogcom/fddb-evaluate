@@ -12,6 +12,25 @@ set yr [0:1.0]
 set key below
 set output "discROC-compare.png"
 plot  "tempDiscROC.txt" using 2:1 title 'Ours' with linespoints pointinterval 50 lw 3 , \
+"rocCurves/HR-ER-DiscROC.txt" using 2:1 title 'HR-ER' with lines lw 2 , \
+"rocCurves/HR-DiscROC.txt" using 2:1 title 'HR' with lines lw 2 , \
+"rocCurves/DeepIRDiscROC(2).txt" using 2:1 title 'DeepIR' with lines lw 2 , \
+"rocCurves/FastCNNDisc.txt" using 2:1 title 'FastCNN' with lines lw 2 , \
+"rocCurves/mxnet-face-fr50-DiscROC.txt" using 2:1 title 'mxnet' with lines lw 2 , \
+"rocCurves/UnitBox-DiscROC.txt" using 2:1 title 'UnitBox' with lines lw 2 , \
+"rocCurves/resnet50-hnm-DiscROC.txt" using 2:1 title 'Xiaomi' with lines lw 2 , \
+"rocCurves/Conv3d_DiscROC.txt" using 2:1 title 'Conv3D' with lines lw 2 , \
+"rocCurves/frcnDiscROC.txt" using 2:1 title 'Faster RCNN' with lines lw 2 , \
+"rocCurves/Hyperface_DiscROC.txt" using 2:1 title 'Hyperface' with lines lw 2 , \
+"rocCurves/MTCNN-DiscROC.txt" using 2:1 title 'Zhang et al.' with lines lw 2 , \
+"rocCurves/cvit_DiscROC.txt" using 1:2 title 'Kumar et al.' with lines lw 2 , \
+"rocCurves/FDDB_FSA4_2_DiscROC.txt" using 2:1 title 'Barbu et al. 2' with lines lw 2 , \
+"rocCurves/DP2MFD_DiscROC.txt" using 2:1 title 'DP2MFD' with lines lw 2 , \
+"rocCurves/CCFDiscROC.txt" using 2:1 title 'CCF' with lines lw 2 , \
+"rocCurves/Faceness-DiscROC.txt" using 2:1 title 'Faceness' with lines lw 2 , \
+"rocCurves/npdfaceDiscROC.txt" using 2:1 title 'NPDFace' with lines lw 2 , \
+"rocCurves/MultiresHPM-DiscROC.txt" using 2:1 title 'MultiresHPM' with lines lw 2 , \
+"rocCurves/FDDB_FSA4_1_DiscROC.txt" using 2:1 title 'Barbu et al.' with lines lw 2 , \
 "rocCurves/DDFD_DiscROC.txt" using 2:1 title 'DDFD' with lines lw 2 , \
 "rocCurves/CasCNN-DiscROC.txt" using 2:1 title 'CascadeCNN' with lines lw 2 , \
 "rocCurves/jjyan_allROC_DiscROC.txt" using 2:1 title 'Yan et al.' with lines lw 2 , \

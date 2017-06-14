@@ -1,7 +1,6 @@
 # Compare your discrete ROC curves with other methods
 # At terminal: gnuplot contROC.p
 set terminal png size 1280, 960 enhanced font 'Verdana,18'
-set key font ",12"
 set size 1,1
 set xtics 500
 set ytics 0.1
@@ -10,11 +9,28 @@ set ylabel "True positive rate"
 set xlabel "False positive"
 set xr [0:2000]
 set yr [0:1.0]
-# Compare your discrete ROC curves with other methods
-# At terminal: gnuplot discROC.p
 set key below
 set output "contROC-compare.png"
 plot  "tempContROC.txt" using 2:1 title 'Ours' with linespoints pointinterval 50 lw 3 , \
+"rocCurves/HR-ER-ContROC.txt" using 2:1 title 'HR-ER' with lines lw 2 , \
+"rocCurves/HR-ContROC.txt" using 2:1 title 'HR' with lines lw 2 , \
+"rocCurves/DeepIRContROC(2).txt" using 2:1 title 'DeepIR' with lines lw 2 , \
+"rocCurves/FastCNNCont.txt" using 2:1 title 'FastCNN' with lines lw 2 , \
+"rocCurves/mxnet-face-fr50-ContROC.txt" using 2:1 title 'mxnet' with lines lw 2 , \
+"rocCurves/UnitBox-ContROC.txt" using 2:1 title 'UnitBox' with lines lw 2 , \
+"rocCurves/resnet50-hnm-ContROC.txt" using 2:1 title 'Xiaomi' with lines lw 2 , \
+"rocCurves/Conv3d_ContROC.txt" using 2:1 title 'Conv3D' with lines lw 2 , \
+"rocCurves/frcnContROC.txt" using 2:1 title 'Faster RCNN' with lines lw 2 , \
+"rocCurves/Hyperface_ContROC.txt" using 2:1 title 'Hyperface' with lines lw 2 , \
+"rocCurves/MTCNN-ContROC.txt" using 2:1 title 'Zhang et al.' with lines lw 2 , \
+"rocCurves/cvit_ContROC.txt" using 1:2 title 'Kumar et al.' with lines lw 2 , \
+"rocCurves/FDDB_FSA4_2_ContROC.txt" using 2:1 title 'Barbu et al. 2' with lines lw 2 , \
+"rocCurves/DP2MFD_ContROC.txt" using 2:1 title 'DP2MFD' with lines lw 2 , \
+"rocCurves/CCFContROC.txt" using 2:1 title 'CCF' with lines lw 2 , \
+"rocCurves/Faceness-ContROC.txt" using 2:1 title 'Faceness' with lines lw 2 , \
+"rocCurves/npdfaceContROC.txt" using 2:1 title 'NPDFace' with lines lw 2 , \
+"rocCurves/MultiresHPM-ContROC.txt" using 2:1 title 'MultiresHPM' with lines lw 2 , \
+"rocCurves/FDDB_FSA4_1_ContROC.txt" using 2:1 title 'Barbu et al.' with lines lw 2 , \
 "rocCurves/DDFD_ContROC.txt" using 2:1 title 'DDFD' with lines lw 2 , \
 "rocCurves/CasCNN-ContROC.txt" using 2:1 title 'CascadeCNN' with lines lw 2 , \
 "rocCurves/jjyan_allROC_ContROC.txt" using 2:1 title 'Yan et al.' with lines lw 2 , \
@@ -36,6 +52,11 @@ plot  "tempContROC.txt" using 2:1 title 'Ours' with linespoints pointinterval 50
  "rocCurves/ViolaJonesScore_n0_ContROC.txt" using 2:1 title 'Viola-Jones' with lines lw 2, \
  "rocCurves/MikolajczykContROC.txt" using 2:1 title 'Mikolajczyk et al.' with lines lw 2, \
  "rocCurves/kienzleContROC.txt" using 2:1 title 'Kienzle et al.' with lines lw 2
+
+
+
+ 
+
 
 
  
