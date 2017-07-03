@@ -9,7 +9,7 @@ To evaluate detection performance, put the detection results under the root of t
 sudo docker run -v your-fddb-evaluate-project-path:/root/fddb pkdogcom/fddb
 ```
 
-The for ROC plots will be updated to compare performance between your detector and some other solutions.
+The four ROC plots will be updated to compare performance between your detector and some other solutions.
 
 ### Detection Result Format ###
 'detection.txt' should follow the official detection format of FDDB, such as 
